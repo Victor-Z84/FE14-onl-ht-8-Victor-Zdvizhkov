@@ -1,0 +1,33 @@
+// Задаем цвета макета
+
+$RedColor: #e84545;
+$RedColorHover : #cf2b2b;
+$BlackColorText: #2d3033;
+$GrayColorText: #6c7279;
+$GrayColorIcon: #c6cacc;
+$GrayColorCopyRight: #808080;
+$MastheadColor: #000000;
+$WhiteFontColor: #ffffff;
+$PurpureColor1: #3a3e64;
+$PurpereColor2: #313454;
+$ClientBG1: #53354a;
+
+
+// Миксины
+
+@mixin RedBtn ($padding-btn, $width-btn) {
+    color: $WhiteFontColor;
+    background-color: $RedColor;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+    padding: $padding-btn;
+    width: $width-btn;
+        &:hover {
+            background-color: $RedColorHover;
+        }
+}

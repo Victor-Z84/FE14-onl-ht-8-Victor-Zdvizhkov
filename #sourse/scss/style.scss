@@ -1,0 +1,78 @@
+// Зададим наиболее популярный шрифт документу
+
+html {
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 16px;
+
+    @media (max-width: 1025px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 10px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 8px;
+    }
+}
+
+body {
+
+    @media (max-width: 1025px) {
+
+&.lock {
+    overflow: hidden;
+}        
+
+    }
+
+}
+
+// Подключаем обнуление стилей
+@import "nullstyle.scss";
+
+// Задаем размеры нашего контейнера
+
+@import "container";
+
+//Подключаем переменные (цвета; )
+
+@import "variables";
+
+//Подключаем секцию masthead
+
+@import "masthead";
+
+// Подключаем секцию features
+
+@import "features";
+
+//Подключаем секцию portfolio
+
+@import "portfolio";
+
+// Подключаем секцию team
+
+@import "team";
+
+//Подключаем секцию clients
+
+@import "clients";
+
+//Подключаем секцию download
+
+@import "download";
+
+//Подключаем секцию contact
+
+@import "contact";
+
+//Подключаем секцию footer
+
+@import "footer";

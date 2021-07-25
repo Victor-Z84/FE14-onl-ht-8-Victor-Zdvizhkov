@@ -1,0 +1,91 @@
+
+
+.contact {
+
+    padding-top: 4.4375rem;
+    padding-bottom: 5.5rem;
+    background-color: $PurpureColor1;
+
+    // .contact__row
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    // .contact__column
+
+    &__column {
+        flex: 0 0 33.333%;
+    }
+}
+
+.contact-item {
+
+    // .contact-item__title
+
+    &__title {
+        color: $WhiteFontColor;
+        font-size: 0.875rem;
+        font-weight: 700;
+        font-style: normal;
+        text-transform: uppercase;
+        margin-bottom: 1.3125rem;
+    }
+
+    // .contact-item__text
+
+    &__text {
+        color: $WhiteFontColor;
+        opacity: 0.5;
+        font-size: 0.875rem;
+        font-style: normal;
+    }
+
+    //Обращаемся к последней колонке с текстом
+
+    &__text_last {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+    }
+
+    // .contact-item__social
+
+    // &__social {
+    // }
+
+    // .contact-item__social-list
+
+    &__social-list {
+        display: flex;
+        max-width: 8.375rem;
+        justify-content: space-between;
+        margin: auto;
+        
+    }
+
+    // .contact-item__social-item
+
+    &__social-item {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.125rem solid $WhiteFontColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+}
+
+
+.fa-facebook-f-1 {
+    color: $WhiteFontColor;
+}
+
+.fa-twitter-1 {
+    color: $WhiteFontColor;
+}
+
+.fa-linkedin-1 {
+    color: $WhiteFontColor;
+}

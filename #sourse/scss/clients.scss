@@ -1,0 +1,166 @@
+
+// .clients {
+// }
+
+.clients-row {
+    display: flex;
+    justify-content: space-between;
+
+		// .clients-row__left-item
+
+		&__left-item {
+            flex: 0 0 50%;
+            position: relative;
+            padding-bottom: 30%;
+		}
+
+		// .clients-row__item
+
+		// &__item {
+		// }
+
+		// .clients-row__img
+
+		&__img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+		}
+
+		// .clients-row__right-item
+
+		&__right-item {
+            width: 50%;
+            background-color: $ClientBG1;
+            text-align: left;
+
+        
+
+
+
+            // .clients-row__right-item_info
+
+			&_info {
+                padding-top: 10%;
+                padding-left: 10%;
+                padding-bottom: 5%;
+
+			}
+            
+			// .clients-row__right-item_text
+
+			&_text {
+                color: $WhiteFontColor;
+                font-family: Cardo;
+                font-size: 2.25rem;         
+                line-height: 2.625rem;
+                max-width: 31.25rem;
+                margin-bottom: 1.875rem;
+                
+			}
+
+			// .clients-row__right-item_position
+
+			&_position {
+                color: $WhiteFontColor;
+                font-size: 0.8125rem;
+                font-weight: 700;
+                line-height: 1.3125rem;
+                text-transform: uppercase;
+			}
+
+            
+		}  
+
+}
+// .clients-row {
+
+// 		// .clients-row__item
+
+// 		&__item {
+// 		}
+// }
+
+//Лента слайдов
+
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+//Ограничивающая оболочка
+
+.slick-list {
+    overflow: hidden;
+}
+
+.clients-slider {
+    position: relative;
+    padding: 0px 1rem;
+    
+
+}
+
+.clients-slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -1.875rem 0.9375rem 0rem 0.9375rem;
+    z-index: 5;
+    font-size: 0;
+    width: 2rem;
+    height: 3rem;
+    border: none;
+    
+
+}
+
+.clients-slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url(../img/clients/chevron-left-solid.svg) 0 0 /100% no-repeat;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+    
+}
+
+.clients-slider .slick-arrow.slick-next {
+    right: 0;
+    background: url(../img/clients/chevron-right-solid.svg) 0 0 /100% no-repeat;
+
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+.clients-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.clients-slider .slick-dots li{
+    list-style: none;
+    margin: 0 2rem;
+    margin-top: 1.5rem;
+
+}
+
+.clients-slider .slick-dots button{
+    font-size: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: $WhiteFontColor;
+
+}
+
+.clients-slider .slick-dots li.slick-active button {
+    background-color: $ClientBG1;
+}

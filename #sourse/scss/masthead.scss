@@ -1,0 +1,251 @@
+.musthead {
+        background: url(/img/masthead/musthead-bg.png);
+        position: relative;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-size: cover;
+        
+}
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(43, 46, 74, 0.95);
+            z-index: 4;
+        }
+
+
+		// .header__body
+
+		&__body {
+            position: relative;
+            // z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            height: 6.25rem;
+            align-items: center;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+		}
+
+		// .header__logo
+
+		&__logo {
+            flex: 0 0 11.8125rem;
+            overflow: hidden;
+            position: relative;
+            z-index: 5;
+		}
+
+        &__logo img {
+            width: 100%;
+            display: block;
+		}
+
+        // .header__burger
+
+		&__burger {
+            display: none;
+
+            & span {
+                position: absolute;
+                background-color: $WhiteFontColor;
+                left: 0;
+                width: 100%;
+                height: 0.25rem;
+                top: 1.15rem;
+                transition: 0.3s; 
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                background-color: $WhiteFontColor;
+                position: absolute;
+                width: 100%;
+                height: 0.25rem;
+                left: 0;
+                transition: 0.3s;
+            }
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            
+
+            &.active::before {
+                transform: rotate(45deg);
+                top: 1.15rem;
+            }
+
+            &.active::after {
+                transform: rotate(-45deg);
+                bottom: 1.15rem;
+            }
+
+        &.active span {
+            transform: scale(0);
+        }
+
+            
+
+            @media (max-width: 1025px) {
+                display: block;
+               
+                width: 3rem;
+                height: 2.5rem;
+                position: relative;
+                z-index: 4;
+            }
+		}
+
+		// .header__menu
+
+		&__menu {
+
+            @media (max-width: 1025px) {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                transition: 0.5s;
+                background-color: $ClientBG1;
+                z-index: 3;
+                padding: 10rem 0rem 0rem 0rem;
+
+            }
+
+        &.active {
+            top: 0;
+        }
+
+
+		}
+
+        
+
+		// .header__list
+
+		&__list {
+            display: flex;
+            position: relative;
+            z-index: 4;
+
+            @media (max-width: 1025px) {
+                display: block;
+            }
+        
+            
+		}
+
+        // .header__item
+
+        &__item {
+            margin: 0 0 0 3.75rem;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            @media (max-width: 1025px) {
+                margin: 0rem 0rem 2.5rem 0rem;
+                text-align: center;
+
+                &:hover {
+                    transform: none;
+                }
+            }
+        }
+
+		// .header__link
+
+		&__link {
+            color: $WhiteFontColor;
+            opacity: 0.75;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $RedColor;
+            }
+
+            @media (max-width: 1025px) {
+                font-size: 2rem;
+            }
+		}
+
+}
+
+.first-screen {
+    // background-color: $MastheadColor;
+
+    // .first-screen__body
+
+    &__body {
+        padding: 16rem 0 9.75rem 0;
+
+        @media (max-width: 1025px) {
+            padding: 9.5rem 0 5.75rem 0;
+        }
+    }
+
+
+
+    // .first-screen__title
+
+    &__title {
+        max-width: 53.8125rem;
+        
+        color: $WhiteFontColor;
+        font-family: "Open Sans";
+        font-size: 4.0625rem;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 4.4375rem;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0 auto 2.5625rem;
+    }
+
+    // .first-screen__description
+
+    &__description {
+
+        max-width: 57rem;
+        color: $WhiteFontColor;
+        font-size: 1.375rem;
+        font-style: normal;
+        line-height: 2.0625rem;
+        text-align: center;
+        margin: 0 auto 4.8125rem;
+    }
+
+    // .first-screen__btn
+
+    &__btn {
+        @include RedBtn (1.125rem 0, 12.5rem);
+    }
+
+}
+
+
+
+

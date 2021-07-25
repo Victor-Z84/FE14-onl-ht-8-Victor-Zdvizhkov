@@ -1,0 +1,35 @@
+
+
+.download {
+    padding: 6.25rem 0;
+
+    // .download__title
+
+    &__title {
+        color: $BlackColorText;
+        font-size: 1.75rem;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.3125rem;
+        margin-bottom: 1rem;
+    }
+
+    // .download__description
+
+    &__description {
+        color: $BlackColorText;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.3125rem;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+
+    // .download__btn
+
+    &__btn {
+        @include RedBtn (1.125rem 0, 17.5rem);
+    }
+}
+

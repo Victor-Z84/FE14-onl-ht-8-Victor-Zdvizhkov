@@ -1,0 +1,120 @@
+
+.portfolio {
+    padding: 0rem 0rem;
+}
+.portfolio-row {
+    // border: 5px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    
+    // height: 700px;
+
+		// .portfolio-row__item
+
+		&__item {
+            
+            // border: 2px solid green;
+            flex-basis: 25%;
+//             flex: 0 0 25%;
+            position: relative;
+            padding: 0.05% 0.05%;
+            
+
+            &:hover {
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(232, 69, 69, 0.8);
+                    border-radius: 3%;
+               
+                }
+                
+            
+               
+            }
+            
+        @media (max-width: 767px) {
+                flex-basis: 33.333%;
+        }
+
+        @media (max-width: 575px) {
+            flex-basis: 50%;
+        }
+
+            
+
+// 			// .portfolio-row__item_info
+
+			&_info {
+                text-align: center;
+                position: absolute;
+                z-index: 1;
+                top: 40%;
+                left: 30%;
+                opacity: 0;
+                transition: 0.5s;
+
+                &:hover {
+                    opacity: 1;
+                }
+			}
+
+// 			// .portfolio-row__item_title
+
+			&_title {
+                color: $WhiteFontColor;
+                font-size: 0.875rem;
+                font-weight: 700;
+                font-style: normal;
+                text-transform: uppercase;
+			}
+
+// 			// .portfolio-row__item_text
+
+			&_text {
+                color: $WhiteFontColor;
+                
+                font-size: 0.875rem;
+                font-weight: 400;
+                display: block;
+                margin-top: 0.8125rem;
+                
+			}
+
+// 			// .portfolio-row__item_img
+
+			&_img {
+                overflow: hidden;
+                border-radius: 3%;
+			}
+
+            &_img img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                display: block;
+               
+            }
+
+          
+		}
+
+@media (max-width: 767px) {
+    :nth-child(4n) {
+        display: none;
+        }
+    }
+
+@media (max-width: 575px) {
+    :nth-child(3n) {
+        display: none;
+        }
+    }
+
+}
+
+
